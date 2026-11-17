@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080808" />
+
+  <title>Muhammad Ebit Pangestu | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-wrapper">
+
+      <a href="index.html" class="logo">
+        <span class="logo-mark">E</span>
+        <span class="logo-text">Ebit<span>.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="active"><span>Home</span></a>
+        <a href="about/index.html"><span>About</span></a>
+        <a href="skill/index.html"><span>Skills</span></a>
+        <a href="project/index.html"><span>Projects</span></a>
+        <a href="certificate/index.html"><span>Certificates</span></a>
+        <a href="contact/index.html"><span>Contact</span></a>
+      </nav>
+
+      <div class="nav-right">
+
+        <a href="contact/index.html" class="nav-button">
+          <span>Let's Talk</span>
+          <span class="arrow">↗</span>
+        </a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+          <p class="hero-subtitle">HELLO, I'M</p>
+
+          <h1>
+            Muhammad Ebit <span>Pangestu.</span>
+          </h1>
+
+          <h2>Informatics Engineering Student</h2>
+
+          <p class="hero-description">
+            I am passionate about web development, technology, and creating
+            digital experiences that are simple, useful, and visually
+            appealing.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="project/index.html" class="btn btn-primary">
+              View My Work
+            </a>
+
+            <a href="#" class="btn btn-secondary">
+              Download CV
+            </a>
+
+          </div>
+        </div>
+
+        <!-- HERO IMAGE -->
+        <div class="hero-image">
+
+          <div class="image-background"></div>
+
+          <div class="profile-card">
+            <div class="profile-placeholder">
+
+
+              <img src="foto_kerja.jpg" alt="Muhammad Ebit Pangestu" />
+
+              <span>YOUR</span>
+              <strong>PHOTO</strong>
+
+            </div>
+          </div>
+
+          <div class="circle circle-one"></div>
+          <div class="circle circle-two"></div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- JAVASCRIPT MOBILE MENU -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+
+      const isOpen = navMenu.classList.toggle("show");
+
+      menuToggle.classList.toggle("active", isOpen);
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
+
+    });
+
+    // Tutup menu ketika link diklik
+    document.querySelectorAll(".nav-menu a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navMenu.classList.remove("show");
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>

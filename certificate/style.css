@@ -1,0 +1,875 @@
+
+/* ========================================
+   GOOGLE FONT
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #080808;
+    color: #eeeeee;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(90%, 1180px);
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    width: 100%;
+    padding: 24px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    width: min(92%, 1180px);
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 8px 9px 8px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 18px;
+
+    background: rgba(16, 16, 16, 0.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-1px);
+}
+
+.logo-mark {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #080808;
+
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #f7e7a1
+    );
+
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.2);
+}
+
+.logo-text {
+    color: #eeeeee;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.logo-text span {
+    color: #d4af37;
+}
+
+
+/* ========================================
+   NAV MENU
+======================================== */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    padding: 4px;
+
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    border-radius: 13px;
+
+    background: rgba(8, 8, 8, 0.65);
+
+    flex-shrink: 0;
+}
+
+.nav-menu a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 36px;
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    color: #999999;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #f7e7a1;
+    background: rgba(212, 175, 55, 0.08);
+
+    transform: translateY(-1px);
+}
+
+.nav-menu a.active {
+    color: #f7e7a1;
+    background: rgba(212, 175, 55, 0.1);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    left: 50%;
+    bottom: 4px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #d4af37;
+}
+
+
+/* ========================================
+   NAV RIGHT
+======================================== */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   NAV BUTTON
+======================================== */
+
+.nav-button {
+    min-width: 105px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 0 14px;
+
+    border-radius: 11px;
+
+    color: #080808;
+
+    background: linear-gradient(
+        135deg,
+        #b8860b,
+        #f7e7a1
+    );
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow: 0 7px 18px rgba(212, 175, 55, 0.15);
+
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 23px rgba(212, 175, 55, 0.25);
+}
+
+.nav-button .arrow {
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: rgba(8, 8, 8, 0.12);
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.nav-button:hover .arrow {
+    transform: translate(2px, -2px);
+
+    background: rgba(8, 8, 8, 0.2);
+}
+
+
+/* ========================================
+   MOBILE MENU BUTTON
+======================================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 11px;
+
+    background: #171717;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 4px;
+
+    color: #d4af37;
+
+    transition: 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: #222222;
+}
+
+.menu-toggle span {
+    width: 17px;
+    height: 2px;
+
+    display: block;
+
+    border-radius: 5px;
+
+    background: #d4af37;
+}
+
+
+/* ========================================
+   CERTIFICATE SECTION
+======================================== */
+
+.certificate-section {
+    min-height: calc(100vh - 90px);
+    padding: 70px 0 100px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 15%,
+            rgba(212, 175, 55, 0.08),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #080808 0%,
+            #121212 52%,
+            #080808 100%
+        );
+}
+
+
+/* ========================================
+   CERTIFICATE HEADER
+======================================== */
+
+.certificate-header {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-subtitle {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #d4af37;
+}
+
+.certificate-header h1 {
+    margin-bottom: 20px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 5vw, 58px);
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+
+    color: #eeeeee;
+}
+
+.certificate-header h1 span {
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #f7e7a1
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+.certificate-header > p:last-child {
+    max-width: 620px;
+
+    margin: auto;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: #b5b5b5;
+}
+
+
+/* ========================================
+   CERTIFICATE GRID
+======================================== */
+
+.certificate-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ========================================
+   CERTIFICATE CARD
+======================================== */
+
+.certificate-card {
+    overflow: hidden;
+
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 22px;
+
+    background: linear-gradient(
+        145deg,
+        #1a1a1a,
+        #101010
+    );
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(212, 175, 55, 0.4);
+
+    background: linear-gradient(
+        145deg,
+        #202020,
+        #141414
+    );
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+
+/* ========================================
+   CERTIFICATE IMAGE
+======================================== */
+
+.certificate-image {
+    position: relative;
+
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #242016,
+        #171717,
+        #292313
+    );
+}
+
+
+/* ========================================
+   DECORATIVE CIRCLE
+======================================== */
+
+.certificate-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 55, 0.12);
+
+    top: -100px;
+    right: -50px;
+}
+
+.certificate-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: rgba(184, 134, 11, 0.12);
+
+    bottom: -70px;
+    left: -40px;
+}
+
+
+/* ========================================
+   CERTIFICATE PLACEHOLDER
+======================================== */
+
+.certificate-placeholder {
+    position: relative;
+    z-index: 2;
+
+    width: 52%;
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 5px;
+
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+
+    background: rgba(16, 16, 16, 0.85);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.certificate-placeholder span {
+    margin-bottom: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #d4af37;
+}
+
+.certificate-placeholder strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+
+    color: #f7e7a1;
+}
+
+
+/* ========================================
+   CERTIFICATE IMAGE FILE
+   Tambahan agar gambar terlihat utuh
+======================================== */
+
+.certificate-placeholder img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 150px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ========================================
+   CERTIFICATE NUMBER
+======================================== */
+
+.certificate-number {
+    position: absolute;
+    z-index: 3;
+
+    top: 20px;
+    right: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 50%;
+
+    background: rgba(16, 16, 16, 0.85);
+
+    color: #f7e7a1;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* ========================================
+   CERTIFICATE CONTENT
+======================================== */
+
+.certificate-content {
+    padding: 30px;
+}
+
+.certificate-category {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d4af37;
+}
+
+.certificate-content h2 {
+    margin-bottom: 12px;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #eeeeee;
+}
+
+.certificate-content p:not(.certificate-category) {
+    min-height: 72px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #b5b5b5;
+}
+
+
+/* ========================================
+   CERTIFICATE LINK
+======================================== */
+
+.certificate-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #d4af37;
+
+    transition: 0.3s ease;
+}
+
+.certificate-link span {
+    transition: 0.3s ease;
+}
+
+.certificate-link:hover {
+    color: #f7e7a1;
+}
+
+.certificate-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .certificate-grid {
+        gap: 20px;
+    }
+}
+
+
+/* ========================================
+   MOBILE NAVBAR
+======================================== */
+
+@media (max-width: 780px) {
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .nav-wrapper {
+        width: 92%;
+
+        min-height: 60px;
+
+        padding: 8px 9px 8px 15px;
+
+        border-radius: 16px;
+
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: calc(100% + 10px);
+        left: 4%;
+
+        width: 92%;
+
+        padding: 10px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 3px;
+
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 16px;
+
+        background: rgba(16, 16, 16, 0.98);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+
+        height: auto;
+
+        padding: 12px 15px;
+
+        text-align: center;
+
+        font-size: 13px;
+    }
+
+    .nav-menu a.active {
+        background: rgba(212, 175, 55, 0.1);
+    }
+
+    .nav-menu a.active::after {
+        display: none;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    /* Certificate */
+
+    .certificate-section {
+        padding: 55px 0 70px;
+    }
+
+    .certificate-header {
+        margin-bottom: 40px;
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+    .nav-wrapper {
+        width: 94%;
+    }
+
+    .logo-text {
+        font-size: 19px;
+    }
+
+    .certificate-header h1 {
+        font-size: 40px;
+    }
+
+    .certificate-header > p:last-child {
+        font-size: 14px;
+    }
+
+    .certificate-image {
+        height: 220px;
+    }
+
+    .certificate-placeholder {
+        width: 80%;
+    }
+
+    .certificate-content {
+        padding: 25px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+    .certificate-header h1 {
+        font-size: 35px;
+    }
+
+    .certificate-placeholder strong {
+        font-size: 21px;
+    }
+
+    .certificate-content h2 {
+        font-size: 19px;
+    }
+}

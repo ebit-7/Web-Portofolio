@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | Muhammad Ebit Pangestu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-wrapper">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-mark">E</span>
+
+                <span class="logo-text">
+                    Ebit<span>.</span>
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="../index.html">
+                    <span>Home</span>
+                </a>
+
+                <a href="index.html" class="active">
+                    <span>About</span>
+                </a>
+
+                <a href="../skill/index.html">
+                    <span>Skills</span>
+                </a>
+
+                <a href="../project/index.html">
+                    <span>Projects</span>
+                </a>
+
+                <a href="../certificate/index.html">
+                    <span>Certificates</span>
+                </a>
+
+                <a href="../contact/index.html">
+                    <span>Contact</span>
+                </a>
+
+            </nav>
+
+
+            <div class="nav-right">
+
+                <a
+                    href="../contact/index.html"
+                    class="nav-button"
+                >
+                    <span>Let's Talk</span>
+                    <span class="arrow">↗</span>
+                </a>
+
+
+                <button
+                    type="button"
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================================
+         ABOUT
+    ================================= -->
+
+    <main>
+
+        <section class="about-section">
+
+            <div class="container about-container">
+
+
+                <!-- LEFT : PROFILE -->
+
+                <div class="about-image">
+
+                    <div class="image-decoration"></div>
+
+                    <div class="profile-card">
+
+                        <div class="profile-placeholder">
+                            
+
+                            <img src="../foto_kerja.jpg" alt="Muhammad Ebit Pangestu" />
+                            <span>YOUR</span>
+
+                            <strong>PHOTO</strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="small-circle"></div>
+
+                </div>
+
+
+                <!-- RIGHT : CONTENT -->
+
+                <div class="about-content">
+
+                    <p class="section-subtitle">
+                        ABOUT ME
+                    </p>
+
+
+                    <h1>
+                        A Little Bit
+                        <span>About Me.</span>
+                    </h1>
+
+
+                    <p>
+                        Hello! I'm Muhammad Ebit Pangestu, an
+                        Informatics Engineering graduate who is
+                        interested in technology and digital development.
+                    </p>
+
+
+                    <p>
+                        I enjoy learning about web development,
+                        programming, user interface design, and
+                        data-related technologies. I like turning
+                        ideas into functional and useful digital
+                        experiences.
+                    </p>
+
+
+                    <p>
+                        Through academic projects, courses, and
+                        personal projects, I continue developing my
+                        technical skills while exploring new
+                        technologies.
+                    </p>
+
+
+                    <!-- INFORMATION -->
+
+                    <div class="about-info">
+
+                        <div class="info-item">
+
+                            <span>
+                                Name
+                            </span>
+
+                            <strong>
+                                Muhammad Ebit Pangestu
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Education
+                            </span>
+
+                            <strong>
+                                Informatics Engineering
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Interest
+                            </span>
+
+                            <strong>
+                                Web Development
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Location
+                            </span>
+
+                            <strong>
+                                Lampung, Indonesia
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+
+                    <div class="about-button">
+
+                        <a
+                            href="../contact/index.html"
+                            class="btn-primary"
+                        >
+                            Let's Connect
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         MOBILE MENU
+    ================================= -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("show");
+
+
+            if (navMenu.classList.contains("show")) {
+
+                menuToggle.innerHTML = "✕";
+
+            } else {
+
+                menuToggle.innerHTML = `
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                `;
+
+            }
+
+        });
+
+
+        const navLinks =
+            document.querySelectorAll(".nav-menu a");
+
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("show");
+
+                menuToggle.innerHTML = `
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                `;
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
